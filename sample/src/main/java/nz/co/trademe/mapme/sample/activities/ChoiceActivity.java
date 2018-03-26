@@ -1,6 +1,9 @@
 package nz.co.trademe.mapme.sample.activities;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
@@ -14,6 +17,11 @@ import com.squareup.picasso.Picasso;
 import nz.co.trademe.mapme.sample.R;
 
 public class ChoiceActivity extends AppCompatActivity {
+
+    public static void start(@NonNull Context context) {
+        Intent intent = new Intent(context, ChoiceActivity.class);
+        context.startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

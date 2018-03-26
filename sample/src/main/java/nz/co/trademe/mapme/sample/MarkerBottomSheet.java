@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import nz.co.trademe.mapme.annotations.MapAnnotation;
+import nz.co.trademe.mapme.sample.activities.ChoiceActivity;
 import nz.co.trademe.mapme.sample.activities.MapActivity;
 
 
@@ -52,8 +53,9 @@ public class MarkerBottomSheet extends BottomSheetDialogFragment {
         view.findViewById(R.id.remove_textview).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((MapActivity) getActivity()).removeAnnotation(mapAnnotation);
-                dismiss();
+                //((MapActivity) getActivity()).removeAnnotation(mapAnnotation);
+                //dismiss();
+                ChoiceActivity.start(getActivity());
             }
         });
     }
